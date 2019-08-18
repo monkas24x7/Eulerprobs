@@ -11,4 +11,4 @@ def primefind(n):
         if x[p]==True: 
             primes.append(p)
     return primes[10000]
-print(primefind(2000000))
+print(primefind(3000000))
