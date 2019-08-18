@@ -11,7 +11,7 @@ def maxprimefac(n):
         p += 1       
     for p in range(2, n): 
         if x[p]==True:
-            primemos.append(p) 
+            primenos.append(p) 
     for item in primenos:
         if n%item==0:
             primefacs.append(p)          
