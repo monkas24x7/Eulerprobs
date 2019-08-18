@@ -1,25 +1,24 @@
-#What is the largest prime factor of the number 600851475143 ?
-
-primefacs=[]
-def maxpf(num):
-    x=3
-    while x<=num:
-        for y in range(3,x,2):
-            if x%y==0:
-                x+=2
-                break
-        else:
-            if num%x==0:
-                primefacs.append(x)
-                x+=2
-            else:
-                x+=2
-                continue
+def maxprimefac(n):
+    p=2 
     
-
+    primenos=[] 
+    primefacs=[]
+    x = [True for y in range(0,n)]    
+    while (p * p <= n):              
+        if x[p] == True:            
+            for y in range(p * p, n, p): 
+                x[y] = False        
+        p += 1       
+    for p in range(2, n): 
+        if x[p]==True:
+            primemos.append(p) 
+    for item in primenos:
+        if n%item==0:
+            primefacs.append(p)          
+            
+        
     return max(primefacs)
-print(maxpf(600851475143))
-
+print(maxprimefac(600851475143))
 
     
 
