@@ -5,8 +5,8 @@ def palindrome(num):
         d=num%10
         tot=tot*10+d
         num//=10         
-    else:
-        return tot==x 
+    
+    return tot==x 
 
 pali=[]
 def lpali():
