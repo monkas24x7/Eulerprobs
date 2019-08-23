@@ -6,10 +6,10 @@ def maxprime(num):
             x=x+ 1
         else:
             num=num/x
-            p_factors.append(x)
+            y=x
     if num > 1:
-        p_factors.append(num)
-    return max(p_factors)
+        y=num
+    return y
 print(maxprime(600851475143))  
 
     
