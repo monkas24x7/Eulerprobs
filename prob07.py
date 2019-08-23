@@ -5,7 +5,7 @@ def primefind(n):
         x[p]= False
     for p in range(3, n+1, 2):
         if x[p] == True:            
-            for y in range(p * p, n+1, p): 
+            for y in range(p * p, n+1, 2*p): 
                 x[y] = False        
           
     for p in range(2, n): 
