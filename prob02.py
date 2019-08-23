@@ -1,12 +1,14 @@
-#lets find all the even fibo nos less than 4000000
-mylist=[1,2]
-for x in range(0,4000000):
-    mylist.append(mylist[-1]+mylist[-2])
-    if mylist[-1]>=4000000:
-        break
-evenfibonos=[]        
-for y in mylist:
-    if y%2==0:
-        evenfibonos.append(y)
-print(sum(evenfibonos))        
+def sum_eve_fibo():
+    a=1
+    b=2
+    c=0
+    tot=0
+    while c<4000000:
+        c=a+b
+        if c%2==0:
+            tot+=c        
+        a=b
+        b=c                
+    return tot 
+print(sum_eve_fibo())       
 
