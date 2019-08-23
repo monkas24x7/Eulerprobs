@@ -10,11 +10,14 @@ def palindrome(num):
 
 pali=[]
 def lpali():
-    ans=list(a*b for a in range(100,1000) for b in range(100,1000))
-    for item in ans:
-        if palindrome(item)==True:
-            pali.append(item)
-    return max(pali)
+    z=0
+    for a in range(100,1000):
+        for b in range(100,1000):
+            a*b
+            if palindrome(a*b)==True and a*b>z:
+                z=a*b
+    return z
+
 print( lpali())
 
 
