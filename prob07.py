@@ -1,12 +1,13 @@
-def primefind(n):
-    p=2 
+def primefind(n):     
     primes=[]      
-    x = [True for y in range(0,n)]    
-    while (p * p <= n):              
+    x = [True for y in range(0,n+1)]    
+    for p in range(4,n+1,2):
+        x[p]= False
+    for p in range(3, n+1, 2):
         if x[p] == True:            
-            for y in range(p * p, n, p): 
+            for y in range(p * p, n+1, p): 
                 x[y] = False        
-        p += 1       
+          
     for p in range(2, n): 
         if x[p]==True: 
             primes.append(p)
