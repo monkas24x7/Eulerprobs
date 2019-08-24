@@ -5,18 +5,17 @@ def lcm():
         den=int(math.gcd(num1,num2))
         lcm=int(num/den)
         return lcm
-         
-    l = range(1,21)
-
-    num1 = l[0] 
-    num2 = l[1] 
-    lcm = find_lcm(num1, num2) 
-    
-    for i in range(2, len(l)): 
-        lcm = find_lcm(lcm, l[i]) 
-        
+    c=1
+    num1 = 1
+    num2 = 2
+    while c<21:         
+        lcm = find_lcm(num1, num2)
+        num1=lcm
+        num2+=1
+        c+=1         
     return lcm
 print (lcm())
+
 
 
 
