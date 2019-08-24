@@ -1,6 +1,5 @@
 def maxprime(num):
     x = 2
-    p_factors = []
     while x*x<= num:
         if num %x:
             x=x+ 1
