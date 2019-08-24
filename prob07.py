@@ -1,16 +1,18 @@
-def primefind(n):     
-    c=1      
-    x = [True for y in range(0,n+1)]    
-    for p in range(4,n+1,2):
-        x[p]= False
-    for p in range(3, n+1, 2):
-        if c<10001:
-            if x[p] == True:
-                z=p
-                c+=1            
-                for y in range(p * p, n+1, 2*p): 
-                    x[y] = False
-        else:
-            break          
-    return z
-print(primefind(3000000))
+def prime():    
+    c=1
+    def primecheck(n):        
+        p = 2       
+        while p*p <= n:
+            if n % p == 0:                
+                return False
+            p += 1        
+        return True
+    z=3
+    while c<=10000:
+        if primecheck(z):
+            c+=1
+            promo=z
+        z+=2
+    return promo
+print(prime())
+
