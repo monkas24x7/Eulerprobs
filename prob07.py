@@ -1,4 +1,4 @@
-def prime():    
+def Optimus_prime():    
     c=1
     def primecheck(n):        
         p = 2       
@@ -14,5 +14,5 @@ def prime():
             promo=z
         z+=2
     return promo
-print(prime())
+print(Optimus_prime())
 
